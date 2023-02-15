@@ -1,0 +1,31 @@
+{
+    "name": "axguowen/think-trace",
+    "description": "ThinkPHP Debug Trace For PHP5.6",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "axguowen",
+            "email": "axguowen@qq.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.6.0",
+        "axguowen/think-framework": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\trace\\": "src"
+        }
+    },
+    "extra": {
+        "think":{
+            "services":[
+                "think\\trace\\Service"
+            ],
+            "config":{
+                "trace": "src/config.php"
+            }
+        }
+    },    
+    "minimum-stability": "dev"
+}
