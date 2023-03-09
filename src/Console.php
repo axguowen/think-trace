@@ -24,7 +24,7 @@ class Console
     ];
 
     // 实例化并传入参数
-    public function __construct($config = [])
+    public function __construct(array $config = [])
     {
         $this->config = array_merge($this->config, $config);
     }
@@ -36,7 +36,7 @@ class Console
      * @param  array     $log 日志信息
      * @return string|bool
      */
-    public function output(App $app, Response $response, $log = [])
+    public function output(App $app, Response $response, array $log = [])
     {
         $request     = $app->request;
         $contentType = $response->getHeader('Content-Type');

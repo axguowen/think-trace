@@ -25,7 +25,7 @@ class Html
     ];
 
     // 实例化并传入参数
-    public function __construct($config = [])
+    public function __construct(array $config = [])
     {
         $this->config = array_merge($this->config, $config);
     }
@@ -38,7 +38,7 @@ class Html
      * @param  array    $log 日志信息
      * @return bool|string
      */
-    public function output(App $app, Response $response, $log = [])
+    public function output(App $app, Response $response, array $log = [])
     {
         $request     = $app->request;
         $contentType = $response->getHeader('Content-Type');
